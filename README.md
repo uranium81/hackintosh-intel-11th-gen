@@ -191,6 +191,27 @@ Kernel extensions were placed under: `/EFI/OC/Kexts` folder.
 
 > Note 2: [MountEFI](https://github.com/corpnewt/MountEFI) can be used to copy create `EFI` folder onto the bootable USB-stick.
 
+## Create bootable macOS
+
+Creation of the bootable macOS Big Sur installer could be done with following command:
+
+```shell
+$ sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/BigSur
+```
+
+It will produce a following output (during 10-12 mins of working):
+
+```plain
+Password:
+Ready to start.
+To continue we need to erase the volume at /Volumes/BigSur.
+If you wish to continue type (Y) then press return: y 
+Erasing disk: 0%... 10%... 20%... 30%... 100%
+Copying to disk: 0%... 10%... 20%... 30%... 40%... 50%... 60%... 70%... 80%... 90%... 100%
+Making disk bootable...
+Install media now available at "/Volumes/Install macOS Big Sur"
+```
+
 ## Booting problems
 
 Unfortunately first obstacle after try to boot was the problem with far too many USB ports defined in ACPI tables for ASRock motherboard and without `XhciPortLimit` quirk set to `true` - the whole system was not even starting correctly. It simply hanged just after USB initialization, sometimes after NVMe or Ethernet card initialization.

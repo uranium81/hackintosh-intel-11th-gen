@@ -286,7 +286,10 @@ At the end of the process the USBMap tool knowns following info about the ports 
     SS21
 ```
 
-This configuration can be exported as `USBMap.kext` and replace `USBInjectAll.kext`. Once placed inside the `EFI` folder reboot the machine. After restart all ports should work correctly for USB 2.0 & USB 3.0 devices.
+Detailed description of the USBMap tool can be found here on [Dortania](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html).
+Typical errors are shown [here](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#usb-issues).
+
+This configuration should be exported as `USBMap.kext` and replace `USBInjectAll.kext`. Once moved inside the `EFI` folder reboot the machine. Now, after restart all ports should work correctly for USB 2.0 & USB 3.0 devices.
 
 ## References
 

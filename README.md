@@ -317,3 +317,5 @@ This configuration should be exported as `USBMap.kext` and replace `USBInjectAll
 CPU comparison:
 
 ![CPU comparison](./art/cpu-comparison-reference.png)
+
+[Source](https://www.cpubenchmark.net/compare/Intel-i5-11600K-vs-Intel-i9-8950HK-vs-Intel-i9-11900K-vs-Intel-i9-10900KF-vs-Intel-i7-3770K/4236vs3246vs3904vs3754vs2)

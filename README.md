@@ -321,3 +321,9 @@ CPU comparison:
 ![CPU comparison](./art/cpu-comparison-reference.png)
 
 [Source](https://www.cpubenchmark.net/compare/Intel-i5-11600K-vs-Intel-i9-8950HK-vs-Intel-i9-11900K-vs-Intel-i9-10900KF-vs-Intel-i7-3770K/4236vs3246vs3904vs3754vs2)
+
+GPU comparison:
+
+![GPU comparison](./art/gpu-comparison-reference.png)
+
+[Source](https://www.videocardbenchmark.net/compare/Quadro-K2000-vs-Quadro-K2000D-vs-Quadro-410-vs-Quadro-K420-vs-GeForce-GTX-780/2446vs2497vs2291vs2992vs2525)

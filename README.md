@@ -5,7 +5,7 @@
 This is the fully detailed guide on how to create a working Hackintosh machine using:
 
 * macOS Big Sur 11.5.2
-* OpenCore 0.7.3
+* OpenCore 0.7.2
 * processor: Intel i5-11600K (11-gen), socket 1200
 * motherboard: [ASRock B560M Steel Legend](https://www.asrock.com/MB/Intel/B560M%20Steel%20Legend/index.pl.asp#Specification)
   * LAN: 2.5Gbit Dragon RTL8125BG
@@ -20,19 +20,20 @@ All parts of the PC work great. What is not working here is caused only by lack 
 
 Working:
 
-* macOS Big Sur 11.5.2
+* macOS Big Sur 11.5.2 or 11.6
 * NVMe boot drive
 * graphics & 4k display
 * Gigabit Ethernet with auto-link negotiation
 * HDMI audio
-* front headphones audio
+* front/back headphones audio
 * USB 2.0 & USB 3.0 gen. 1
+* any camera connected via USB
+* any headphoines connected via USB
 
 What is *NOT* working:
 
 * Bluetooth
 * WiFi card
-* camera (not tested if USB-connected one will do the job)
 
 Any compatible additional graphic card should do the job. The one used here was just cheap enough as the prices of AMD Radeon 570X or 580X are crazy these days. Remember that due to the fact that 11th-gen iGPU is not yet supported by macOS natively, it can't be used out-of-the-box.
 
@@ -46,6 +47,7 @@ Most of the steps, instructions, information etc. has been taken from following 
 * [Hackintosh i5-11400K on Big Sur 11.2.3](https://www.youtube.com/watch?v=O2uDuXSBudI); with [shared settings for ASRock Steel Legend](https://mybox.naver.com/share/list?shareKey=QuiWYI_wB1GVEsBrB8aNjJoG0PHF_coirdt7tLsck2qqHpqF6mCcykf5iiAaTJp7W6RxJH-PRcpsdT1QDE_sTAU%3D) - taken semi-working config; this was really helpful!
 * [Hackintosh i5-11600K video](https://www.youtube.com/watch?v=kc5OnPa_jIE) - another tutorial explaining a lot of stuff and inspiring more configuration tweaks & ideas
 * [EASY USB Port Mapping on Intel 2020](https://www.youtube.com/watch?v=uww6Cizil_g) - USB port-mapping approach tutorial; however nothing mentioned here worked straight with current build and had to use [USBMap](https://github.com/corpnewt/USBMap) instead
+* [List of supported graphic cards](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html)
 
 ## Additional hardware
 

@@ -95,10 +95,11 @@ Following features have to be properly enabled or disabled to make the macOS boo
 
 * enable XMP on memory modules to achieve 3200MHz frequency
 * `Advanced > CPU Configuration`:
+  * CFG Lock - `Disabled` (as Enabled by default)
+* `Advanced > Chipset Configuration`:
   * Above 4G Decoding - `Enabled` (as Disabled by default)
   * VT-d - `Disabled` (as Enabled by default)
   * iGPU Multi-Monitor - `Disabled` (as Enabled by default)
-  * CFG Lock - `Disabled` (as Enabled by default)
 * `Advanced > Storage Configuration`:
   * SATA Mode Selection - set to `AHCI`
   * SATA Aggressive Link Power Management - `Disabled`
@@ -131,6 +132,8 @@ Steps to create desired files (in particular for the platform: `SSDT-AWAC.aml`, 
     * run Rufus, select USB-stick, select `FreeDOS` boot-selection and point to Ubuntu ISO as described [here](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#4-boot-selection-and-partition-scheme)
 1. Upload [SSDTTime](https://github.com/corpnewt/SSDTTime) tool onto the USB-stick too as it will be required later, full info is described [here](https://dortania.github.io/Getting-Started-With-ACPI/ssdt-methods/ssdt-easy.html#running-ssdttime). For example keep it under `tools/SSDTTime` folder.
 
+[This guide](https://ubuntu.com/tutorials/create-a-usb-stick-on-macos) describes, how to install Ubuntu on a macOS machine. 
+
 Now, we can actually plug the USB-stick and run Ubuntu with **SSDTTime**. Reboot the machine and:
 
 1. Boot `Ubuntu` using `save graphics`. Somehow the nVidia Quadro K420 was not recognized and regular startup will hang (or display black screen) in later stages.
@@ -142,7 +145,7 @@ Now, we can actually plug the USB-stick and run Ubuntu with **SSDTTime**. Reboot
 1. Copy the `SSDTTime` from USB-stick. Drive should be mounted by default as `/media/ubuntu` into your home folder. Somehow running it from thumb directly was failing for me.
 
     ```shell
-    $ cp -r ~/ /media/ubuntu/tools/SSDTTime
+    $ cp -r /media/ubuntu/tools/SSDTTime ~/
     ```
 
 1. Grant execution privileges to `SSDTTime.py` and `iasl` files.
@@ -160,7 +163,7 @@ Now, we can actually plug the USB-stick and run Ubuntu with **SSDTTime**. Reboot
 
   > Since Ubuntu didn't recognized graphics card, nor ethernet it might be useful to enable WiFi via dongle mentioned earlier to get web access. Run the `Settings app`, then navigate to `WiFi` and add your network credentials.
 
-Sequence to create respective SSDT files:
+Sequence to create respective SSDT files (different options could be given in newer project versions):
 
 * hit 8 - dump - creates `DSDT.aml`
 * hit 4 - plugin type - `SSDT-PLUG.aml`
